@@ -1,4 +1,3 @@
-import "./App.css";
 import TaskList from "./components/TaskList";
 
 const tasks = [
@@ -18,11 +17,11 @@ const tasks = [
 
 const TASK_STATUSES = ["Not-started", "In-progress", "Done"];
 
-function App() {
+const App = () => {
   return (
     <div className="tasks">
       <div className="tasks-header">
-        <button className="button button-default">+ New task</button>
+        <button className="button button-default">New task</button>
       </div>
       <div className="task-lists">
         {TASK_STATUSES.map((status) => {
@@ -32,6 +31,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

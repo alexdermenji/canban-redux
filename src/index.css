@@ -43,8 +43,11 @@ hr {
 }
 
 .button-default {
-  background: #cacaca;
+  background: #3a7a3a;
   color: black;
+  width: 200px;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 /* layout */
@@ -73,6 +76,7 @@ hr {
 
 /* Task */
 .task {
+  border-radius: 5px;
   margin-bottom: 15px;
   background: #fff;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
@@ -84,6 +88,9 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
+  background-color: #68723e;
+  color: #ffffff;
 }
 
 .task-body {
@@ -101,5 +108,11 @@ hr {
 }
 
 .task-list-title {
+  text-align: center;
+  background-color: #536ecd;
   margin-bottom: 10px;
+  color: #ffffff;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
