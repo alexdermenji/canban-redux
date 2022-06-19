@@ -1,7 +1,7 @@
 import "./App.css";
-import TasksPage from "./components/TaskPage";
+import TaskList from "./components/TaskList";
 
-const mockTasks = [
+const tasks = [
   {
     id: 1,
     title: "Learn Redux",
@@ -16,10 +16,20 @@ const mockTasks = [
   },
 ];
 
+const TASK_STATUSES = ["Not-started", "In-progress", "Done"];
+
 function App() {
   return (
-    <div className="App">
-      <TasksPage tasks={mockTasks} />
+    <div className="tasks">
+      <div className="tasks-header">
+        <button className="button button-default">+ New task</button>
+      </div>
+      <div className="task-lists">
+        {TASK_STATUSES.map((status) => {
+          const statusTasks = tasks.filter((task) => task.status === status);
+          return <TaskList key={status} status={status} tasks={statusTasks} />;
+        })}
+      </div>
     </div>
   );
 }
